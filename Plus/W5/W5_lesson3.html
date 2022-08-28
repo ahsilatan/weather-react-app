@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--Challenge 1 (link to axios below)
+      -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <h1>JavaScript AJAX</h1>
+
+    <h3>JS Challenge 1</h3>
+    <p>
+      Import Axios to this page
+      <br />
+      <a href="https://github.com/axios/axios">Axios on GitHub</a>
+    </p>
+
+    <h3>JS Challenge 2</h3>
+    <p>
+      Given the API
+      <a href="https://jsonplaceholder.typicode.com/"
+        >https://jsonplaceholder.typicode.com/</a
+      >, get the comments (/comments) and log the API response
+    </p>
+
+    <h3>JS Challenge 3</h3>
+    <p>Log the first comment email from the API response</p>
+
+    <script>
+      function showComments(response) {
+        console.log(response);
+        console.log(response.data[0].email);
+      }
+      let url = "https://jsonplaceholder.typicode.com/comments";
+      axios.get(url).then(showComments);
+
+      //AJAX with Fetch
+      //let root = 'https://jsonplaceholder.typicode.com'
+      //let path = 'users/1'
+
+      //fetch(root + '/' + path)
+      //.then(response => (
+      //response.json()
+      //))
+      //.then(json => (
+      //console.log(json)
+      //));
+      //Note: We recommend axios instead
+
+      //More info url="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
+
+      //JavaScript
+      //AJAX with Axios
+      //<!DOCTYPE html>
+      //<html>
+      //<body>
+      //<script src="https://unpkg.com/axios/dist/axios.min.js">
+      //<script>
+      //function showUser(response) {
+      //alert(`The user name is ${response.data.name}`);
+      //}
+
+      //let url = "https://jsonplaceholder.typicode.com/users/1";
+      //axios.get(url).then(showUser);
+      //
+      //</body>
+      //</html>
+      // More info url="https://github.com/axios/axios"
+
+      //Related links
+      //AJAX reference
+      //https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX
+      //Get Axios
+      //https://github.com/axios/axios
+    </script>
+  </body>
+</html>

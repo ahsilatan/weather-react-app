@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays vs Objects</title>
+  </head>
+  <body>
+    <h2>JS Challenge 1 Given an object called paris, log its temperature</h2>
+    <h2>
+      JS Challenge 2 Create an object called sydney similar to paris and log its
+      temperature (use fake data)
+    </h2>
+    <h2>
+      JS Challenge 3 Create an array with 3 different Australian city names only
+      and log each name
+    </h2>
+    <h2>
+      JS Challenge 4 Create an array of 3 cities with the same properties as
+      paris and console log each city temperature
+    </h2>
+    <script>
+      let paris = {
+        name: "Paris",
+        country: "France",
+        language: "French",
+        temperature: 18,
+        capitalCity: true,
+      };
+      //1
+      console.log(paris.temperature); //console.log(paris["temperature"]);
+      //2
+      let sydney = {
+        name: "Sydney",
+        country: "Australia",
+        language: "English",
+        temperature: 22,
+        capitalCity: false,
+      };
+      console.log(sydney.temperature);
+      //3
+      let city = ["Melbourne", "Brisbane", "Perth"];
+      console.log(city[0]);
+      console.log(city[1]);
+      console.log(city[2]);
+      //4
+      let cities = [
+        {
+          name: "Melbourne",
+          country: "Australia",
+          language: "English",
+          temperature: 18,
+          capitalCity: false,
+        },
+        {
+          name: "Brisbane",
+          country: "Australia",
+          language: "English",
+          temperature: 21,
+          capitalCity: false,
+        },
+        {
+          name: "Perth",
+          country: "Australia",
+          language: "English",
+          temperature: 26,
+          capitalCity: false,
+        },
+      ];
+      console.log(
+        `The temperature of ${cities[0].name} is ${cities[0].temperature} degrees.`
+      );
+      console.log(
+        `The temperature of ${cities[1].name} is ${cities[1].temperature} degrees.`
+      );
+      console.log(
+        `The temperature of ${cities[2].name} is ${cities[2].temperature} degrees.`
+      );
+    </script>
+  </body>
+</html>

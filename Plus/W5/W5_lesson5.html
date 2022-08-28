@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+      <h1>JavaScript Geolocation API</h1>
+
+    <h3>JS Challenge 1</h3>
+    <p>Log your current latitude and longitude using the Geolocation API</p>
+
+    <h3>JS Challenge 2</h3>
+    <p>Log the current temperature where you are.</p>
+
+    <h3>JS Challenge 3</h3>
+    <p>
+      Change the h1 of this page by the current temperature
+    </p>
+    -->
+    <!--
+        Geolocation API
+function handlePosition(position) {
+  console.log(position.coords.latitude);
+  console.log(position.coords.longitude);
+}
+
+navigator.geolocation.getCurrentPosition(handlePosition)
+The Geolocation API allows the user to provide their location to web applications if they so desire. For privacy reasons, the user is asked for permission to report location information.
+
+More info url="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API"
+
+Related links
+Geolocation API
+https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API
+    -->
+    <h1></h1>
+    <script>
+      function showTemp(response) {
+        console.log(response.data.main.temp);
+        let temperature = Math.round(response.data.main.temp);
+        console.log(temperature);
+        let message = document.querySelector("h1");
+        message.innerHTML = `Current temperatire is ${temperature}°C`;
+      }
+
+      function showPosition(position) {
+        console.log(position);
+        console.log(position.coords.latitude);
+        console.log(position.coords.longitude);
+        let long = position.coords.longitude;
+        let lat = position.coords.latitude;
+        let apiKey = "f7e96c4687bfb6b134cee7438fc7f3c7";
+        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`;
+        console.log(apiUrl);
+        axios.get(apiUrl).then(showTemp);
+      }
+      navigator.geolocation.getCurrentPosition(showPosition);
+    </script>
+  </body>
+</html>

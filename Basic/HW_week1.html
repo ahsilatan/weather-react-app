@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>meteoprog</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+      }
+      h1 {
+        color: #1a64d6;
+        margin: 0;
+        font-size: 35px;
+      }
+      h2 {
+        font-size: 35px;
+        font-weight: 100;
+        margin: 5px;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+      }
+
+      button {
+        color: #ffffff;
+        background-color: #1a64d6;
+        padding: 15px 20px;
+        font-size: 16px;
+        border: 1px solid #1a64d6;
+        border-radius: 50px;
+        transition: all 250ms ease-in-out;
+      }
+      button:hover {
+        color: #1a64d6;
+        background-color: #ffffff;
+        cursor: pointer;
+      }
+      p {
+        font-family: monospace;
+        font-size: 18px;
+        color: #4d4c48;
+      }
+      .block {
+        padding: 10px 0px;
+        border-radius: 10px;
+        transition: all 200ms ease-in-out;
+        max-width: 400px;
+        text-align: center;
+        margin: 0 auto;
+      }
+      .block:hover {
+        background-color: azure;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      ⛅️ <br />
+      Currently 21° in Tokio
+    </h1>
+    <h2>
+      13° /
+      <strong>23°</strong>
+    </h2>
+    <ul>
+      <li class="block">
+        <h3 class="day">🌧 Tomorrow</h3>
+        <p>
+          10°
+          <strong> / 22°</strong>
+        </p>
+      </li>
+      <li class="block">
+        <h3 class="day">🌥 Saturday</h3>
+        <p>
+          15°
+          <strong> / 17°</strong>
+        </p>
+      </li>
+      <li class="block">
+        <h3 class="day">☀️ Sunday</h3>
+        <p>
+          25°
+          <strong> / 28°</strong>
+        </p>
+      </li>
+    </ul>
+    <button>Change city</button>
+    <p class="author">Coded by @ahsilatan</p>
+  </body>
+</html>

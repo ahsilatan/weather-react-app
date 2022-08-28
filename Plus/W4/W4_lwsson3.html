@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Functions Parameters</title>
+  </head>
+  <body>
+    <h1>Windy</h1>
+    <script>
+      // Challenge
+      // 1. Create a function isWindy
+      // 2. Add a speed parameter to the function
+      // 3. If speed is greater than 5, alert ‘It is windy’
+      // 4. Else, alert ‘It is not windy’
+      // 5. Call the function twice with different arguments to test both scenarios
+      function isWindy(speed) {
+        if (speed > 5) {
+          alert("It is windy");
+        } else {
+          alert("It is not windy");
+        }
+      }
+      let speed = prompt("What is the wind speed?");
+      isWindy(speed);
+
+      //Giving things to functions
+      //function greetUser(name) {
+      // alert("Welcome to SheCodes, " + name);
+      //}
+
+      //let firstName = prompt("What's your name?");
+      //greetUser(firstName);
+      //greetUser("Inês");
+      //greetUser("Teresa");
+      //Giving multiple things to functions
+      //function fullName(firstName, lastName) {
+      //alert(firstName + " " + lastName);
+      //}
+
+      //let firstName = prompt("What's your first name?");
+      //let lastName = prompt("What's your last name?");
+      //fullName(firstName, lastName);
+      //fullName("Matt", "Delac");
+    </script>
+  </body>
+</html>

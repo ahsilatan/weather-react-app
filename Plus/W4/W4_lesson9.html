@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+      <head>
+    <title>She Codes Plus</title>
+    <meta charset="UTF-8" />
+    <link href="src/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <img src="images/logo.png" alt="She Codes Plus Logo" class="logo" />
+    <h1>Forms</h1>
+  
+
+    <h3>Challenge 1</h3>
+    <p>When clicking this button, alert "Hooray!"</p>
+    <button id="special-button">Click me</button>
+    <h3>Challenge 2</h3>
+    <p>
+      When submitting the form, alert the value of the password input
+      <form id="password-form">
+        <input type="password" id="password-input" placeholder="Enter your password">
+        <input type="submit" value="Sign up">
+      </form>
+    </p>
+    <h3>Challenge 3</h3>
+    <p>
+        When submitting the form, alert the value of the username and email inputs
+        <form id="signup-form">
+          <input type="email" id="email-input" placeholder="Enter your email" required>
+          <input type="username" id="username-input" placeholder="Enter your username" required>
+          <input type="submit" value="Sign up">
+        </form>
+    </p>
+      
+    <script src="src/index.js"></script>
+    <script>
+      //Event Listener
+      //Listen to submission events of the form
+
+      //Click event
+      //function handleClick() {
+      // ...
+      //}
+      //let button = document.querySelector("#special");
+      //button.addEventListener("click", handleClick);
+
+      //Submit event (better)
+      //let form = document.querySelector("form");
+      //form.addEventListener("submit", handleSubmit);
+      //Prevent Default
+      //This will prevent form default behavior
+      //function handleSubmit(event) {
+      //event.preventDefault();
+      //}
+
+      //function handleClick(event) {
+      //event.preventDefault();
+      //}
+      //Get input value
+      //Access to the input value
+      //<form>
+      //<input type="text" id="email" />
+      //</form>
+      //<script>
+
+      //function signUp(event) {
+      //event.preventDefault();
+      //let input = document.querySelector("#email");
+      //console.log(input.value);
+      //}
+      //let form = document.querySelector("form");
+      //form.addEventListener("submit", signUp);
+      //
+      //1
+      function clickMe() {
+        alert("Hooray!");
+      }
+      let clickMeButton = document.querySelector("#special-button");
+      clickMeButton.addEventListener("click", clickMe);
+
+        //2
+function password(event) {
+  event.preventDefault();
+  let passwordInput = document.querySelector("#password-input");
+  alert(`Your password is ${passwordInput.value}`);
+}
+let form = document.querySelector("#password-form");
+form.addEventListener("submit", password);
+//3
+function userData (event){
+  event.preventDefault();
+  let email = document.querySelector("#email-input");
+  let userName = document.querySelector("#username-input");
+  alert(`Your email is ${email.value}`);
+    alert(`Your username is ${userName.value}`);
+}
+let signupForm = document.querySelector("#signup-form");
+signupForm.addEventListener("submit", userData);
+    </script>
+  </body>
+</html>

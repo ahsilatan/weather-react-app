@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS strings</title>
+  </head>
+  <body>
+    <script>
+      let country = "Guinea Bissau";
+      console.log("From", country);
+      country = country.replace(" ", "-");
+      console.log("to", country);
+      let city = " Sydney   ";
+      city = city.trim();
+      console.log(city);
+      let place = "School";
+      place = place.toUpperCase();
+      console.log(place);
+      let attraction = "Opera House";
+      attraction = attraction.toLowerCase();
+      console.log(attraction);
+      console.log(
+        `I went to visit the ${attraction} in ${city}, right next to my ${place}. Now, I'm getting ready for my trip to ${country}!`
+      );
+//Second option 
+      let country = "Guinea Bissau";
+      console.log(country.replace(" ", "-"));
+
+      let city = " Sydney   ";
+      console.log(city.trim());
+
+      let place = "School";
+      console.log(place.toUpperCase());
+
+      let attraction = "Opera House";
+      console.log(attraction.toLowerCase());
+
+      let sentence = `I went to visit the ${attraction} in ${city}, right next to my ${place}. Now, I'm getting ready for my trip to ${country}!`;
+      console.log(sentence);
+    </script>
+  </body>
+</html>

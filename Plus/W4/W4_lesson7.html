@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Selectors</title>
+  </head>
+  <body>
+    <script>
+      //QuerySelector
+      //document.querySelector("li");
+      //document.querySelector(".day");
+      //document.querySelector("ul#list p");
+      //QuerySelectorAll
+      //document.querySelectorAll("li");
+      //document.querySelectorAll("li#special p");
+      //ClassName
+      //let li = document.querySelector("li#special");
+      //li.classList.remove("liked");
+      //li.classList.add("something");
+      //innerHTML
+      //let li = document.querySelector("li")
+      //li.innerHTML = "Hello World";
+
+      // Challenge 1
+      // Log li with id special
+      let country = document.querySelector("#special");
+      console.log(country);
+      // Challenge 2
+      // Log all li with class of country
+      let contries = document.querySelectorAll(".country");
+      console.log(contries);
+      // Challenge 3
+      // Add class special to the li with id special
+      country.classList.add("special");
+      // Challenge 4
+      // In your code, replace the content of the element with id special
+      // by your favorite country (other than Portugal of course)
+      country.innerHTML = "Ukraine";
+    </script>
+  </body>
+</html>

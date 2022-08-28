@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="widget">
+        <input
+          type="search"
+          placeholder="City"
+          class="search"
+          id="search-city"
+        />
+
+        <div class="highlights">
+          <h2>Today highlights</h2>
+          <div class="container">
+            <div class="row">
+              <div class="col-3">
+                <div class="sunset">
+                  <h3>Sunrise and sunset</h3>
+                  <ul class="sun">
+                    <li><img src="img/sunrise.svg" alt="sunrise" /> 05:13</li>
+                    <li><img src="img/sunset.svg" alt="sunset" /> 20:33</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="sunset">
+                  <h3>Wind status</h3>
+                  <p class="highlight">↓3.6 km/h</p>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="sunset">
+                  <h3>Precipitation</h3>
+                  <p class="highlight">54%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-card">
+            <div class="row">
+              <div class="col">
+                <div class="main-card">
+                  <div class="card" style="width: 285px">
+                    <h1 class="card-title">New York</h1>
+                    <img
+                      class="weather"
+                      src="img/cloud.svg"
+                      alt="cloud"
+                      width="150px"
+                    />
+                    <div class="card-body">
+                      <p class="card-text">
+                        <strong> 16°C</strong>
+                        <br />
+                        Monday 18:15
+                        <small> Mostly cloudy</small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="small-card">
+                  <div class="card" style="width: 100px">
+                    <h3 class="card-title">Tue</h3>
+                    <img
+                      class="weather"
+                      src="img/cloud.svg"
+                      alt="cloud"
+                      width="50px"
+                    />
+                    <div class="card-body">
+                      <p class="small-card-text">16°C</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="small-card">
+                  <div class="card" style="width: 100px">
+                    <h3 class="card-title">Wed</h3>
+                    <img
+                      class="weather"
+                      src="img/cloud.svg"
+                      alt="cloud"
+                      width="50px"
+                    />
+                    <div class="card-body">
+                      <p class="small-card-text">16°C</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="small-card">
+                  <div class="card" style="width: 100px">
+                    <h3 class="card-title">Thu</h3>
+                    <img
+                      class="weather"
+                      src="img/cloud.svg"
+                      alt="cloud"
+                      width="50px"
+                    />
+                    <div class="card-body">
+                      <p class="small-card-text">16°C</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="small-card">
+                  <div class="card" style="width: 100px">
+                    <h3 class="card-title">Fri</h3>
+                    <img
+                      class="weather"
+                      src="img/cloud.svg"
+                      alt="cloud"
+                      width="50px"
+                    />
+                    <div class="card-body">
+                      <p class="small-card-text">16°C</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="small-card">
+                  <div class="card" style="width: 100px">
+                    <h3 class="card-title">Sat</h3>
+                    <img
+                      class="weather"
+                      src="img/cloud.svg"
+                      alt="cloud"
+                      width="50px"
+                    />
+                    <div class="card-body">
+                      <p class="small-card-text">16°C</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="small-card">
+                  <div class="card" style="width: 100px">
+                    <h3 class="card-title">Sun</h3>
+                    <img
+                      class="weather"
+                      src="img/cloud.svg"
+                      alt="cloud"
+                      width="50px"
+                    />
+                    <div class="card-body">
+                      <p class="small-card-text">16°C</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="src/index.js"></script>
+</html>

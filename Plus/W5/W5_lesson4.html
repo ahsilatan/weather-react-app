@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>City temperature</h1>
+    <div id="temp"></div>
+    <!--
+         <h3>JS Challenge 1</h3>
+    <p>Import Axios</p>
+
+    <h3>JS Challenge 2</h3>
+    <p>Get your API key and save in a variable called apiKey</p>
+
+    <h3>JS Challenge 3</h3>
+    <p>Get the API response for the weather in Sydney, using metrics unit</p>
+
+    <h3>JS Challenge 4</h3>
+    <p>Log the current temperature in Sydney</p>
+
+    <h3>JS Challenge 5</h3>
+    <p>
+      Replace the h1 of this page with the weather in Sydney: i.e: It is 19
+      degrees in Sydney
+    </p>
+    -->
+    <script>
+      let apiKey = "f7e96c4687bfb6b134cee7438fc7f3c7";
+      let apiUrl =
+        "https://api.openweathermap.org/data/2.5/weather?q=Sydney&units=metric";
+
+      function showTemp(response) {
+        console.log(response.data);
+        console.log(response.data.main.temp);
+        let temperature = document.querySelector("#temp");
+        let roundTemp = Math.round(response.data.main.temp);
+        temperature.innerHTML = `It is ${roundTemp}°C in ${response.data.name}`;
+      }
+      axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemp);
+
+      //let apiKey = "f7e96c4687bfb6b134cee7438fc7f3c7";
+      //let apiUrl ="https://api.openweathermap.org/data/2.5/weather?q=Sydney&units=metric";
+
+      //function showTemp(response) {
+      // console.log(response.data);
+      // console.log(response.data.main.temp);
+      // let temp = Math.round(response.data.main.temp);
+      // let message = `It is ${temp}°C in ${response.data.name}`
+      // let h1 = document.querySelector("h1");
+      //  h1.innerHTML = message;
+      // }
+      // axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemp);
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dates</title>
+  </head>
+  <body>
+    JS Challenge 1 Log the current date JS Challenge 2 Log the number of
+    milliseconds in the current time JS Challenge 3 Log the current day JS
+    Challenge 4 Log the current year JS Challenge 5 Log the current month JS
+    Challenge 6 Display the current date following the following format: Today
+    is Thursday, April 4, 2020 JS Challenge 7 Create a function formatDate which
+    returns a date following this format: Thursday, April 4, 2020 Call this
+    function with the current time Log the result such as
+    console.log(formatDate(new Date()));
+    <script>
+      //Get current time
+      //let now = new Date();
+      //Get current minutes
+      //now.getMinutes(); // 0,1,2, 12
+      //Get current hours
+      //now.getHours(); //1, 2, 3, 4
+      //Get current date
+      //now.getDate(); //1, 2, 3, 4
+      //Get current day
+      //now.getDay(); // 0, 1, 2
+
+      //Related links https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+      //1
+      let now = new Date();
+      console.log(now);
+      //2
+      console.log(now.getMilliseconds());
+      //3
+      console.log(now.getDate());
+      //4
+      console.log(now.getFullYear());
+      //5
+      console.log(now.getMonth());
+      //6
+      let date = now.getDate();
+      let year = now.getFullYear();
+      let days = ["Sun", "Mon", "Tue", "Wednesday", "Thu", "Fri", "Sat", "Sun"];
+      let day = days[now.getDay()];
+      let months = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "June",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Ocn",
+        "Now",
+        "Dec",
+      ];
+      let month = months[now.getMonth()];
+      console.log(`Today is ${day}, ${month} ${date}, ${year}`);
+      //7
+      function formatDate(date) {
+        let days = [
+          "Sun",
+          "Mon",
+          "Tue",
+          "Wednesday",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun",
+        ];
+        let months = [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "June",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Ocn",
+          "Now",
+          "Dec",
+        ];
+        let year = date.getFullYear();
+        let day = days[date.getDay()];
+        let month = months[date.getMonth()];
+        let currentDate = date.getDate();
+
+        let today = `Today is ${day}, ${month} ${currentDate}, ${year}`;
+        return today;
+      }
+      let time = new Date("2005/11/08");
+      console.log(formatDate(time));
+    </script>
+  </body>
+</html>

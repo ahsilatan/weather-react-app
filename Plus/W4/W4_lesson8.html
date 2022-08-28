@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Events</title>
+  </head>
+  <body>
+    <script>
+      //Create an event
+      //function sayHi() {
+      //alert("hi");
+      //}
+
+      //let element = document.querySelector("#city");
+      //console.log(element);
+
+      //element.addEventListener("click", sayHi);
+      //Event types
+      //click
+      //mouseenter
+      //mouseleave
+      //mousedown
+      //mouseup
+      //mousemove
+      //keydown
+      //keyup
+      //Use a defined function
+      //function showWeather() {
+      //alert("It is 18 degrees");
+      //}
+      //let element = document.querySelector("li");
+      //element.addEventListener("click", showWeather);
+      //event
+      //function showWeather(event) {
+      //event.preventDefault();
+      //let h1 = document.querySelector("h1");
+      //h1.innerHTML = "The weather is currently 19 degrees";
+      //}
+      //let element = document.querySelector("a");
+      //element.addEventListener("click", showWeather);
+      //Get attribute
+      //let link = document.querySelector("a").getAttribute("href");
+      // Challenge 1
+      // Add click eventListener to the button. Alert `It is 18 degrees`
+      function showWeather() {
+        alert("It is 18 degrees");
+      }
+      let element = document.querySelector("button");
+      element.addEventListener("click", showWeather);
+      // Challenge 2
+      // When the button is clicked, replace button label by ‘18 degrees’
+      function showButton(event) {
+        event.preventDefault();
+        let button = document.querySelector("button");
+        button.innerHTML = "18 degreess";
+      }
+      let click = document.querySelector("button");
+      element.addEventListener("click", showButton);
+    </script>
+  </body>
+</html>
